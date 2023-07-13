@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Search</title>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <style>
-            .container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                height: 100vh;
-            }
+<head>
+    <title>Search</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-            .button-container {
-                padding-top: 30px;
-            }
+        .search-form {
+            max-width: 600px;
+            width: 80%;
+        }
 
-            @media (min-width: 600px) {
-                /* Adjust the minimum width for larger screens */
-                .search-bar {
-                    width: 510px;
-                }
-            }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
 
-            @media (max-width: 599px) {
-                /* Adjust the maximum width for smaller screens */
-                .search-bar {
-                    width: 100%;
-                }
-            }
+        .search-bar input[type="text"] {
+            flex: 1;
+            padding: 4px;
+        }
 
-        </style>
-    </head>
-    <body style="background-color: rgb(53, 54, 58)">
-        <div class="container">
-            <form action="https://www.google.com/search">
-                <div class="search-bar">
-                    <input type="text" name="q" class="form-control rounded-pill" id="'formSearchInput" placeholder="Search Google or type a URL">
-                </div>
-                <div class="button-container">
-                    <button type="submit" value="Google Search" class='btn btn-secondary' style="margin-right: 5px;">Google Search</button>
-                    <button type="submit" value="Google Lucky" class='btn btn-secondary' >I'm Feeling Lucky</button>
-                </div>
-            </form>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 30px;
+        }
+
+        /* Media query for screens smaller than 600px */
+        @media (max-width: 600px) {
+            .search-bar {
+                width: 90%; /* Adjust the width for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body style="background-color: rgb(53, 54, 58)">
+    <form class="search-form" action="https://www.google.com/search">
+        <div class="search-bar">
+            <input type="text" name="q" class="form-control rounded-pill" id="formSearchInput" placeholder="Search Google or type a URL">
         </div>
-    </body>
+        <div class="button-container">
+            <button type="submit" value="Google Search" class='btn btn-secondary' style="margin-right: 5px;">Google Search</button>
+            <button type="submit" value="Google Lucky" class='btn btn-secondary' >I'm Feeling Lucky</button>
+        </div>
+    </form>
+</body>
 </html>
