@@ -13,7 +13,7 @@
         }
 
         .search-form {
-            max-width: 600px;
+            max-width: 500px;
             width: 80%;
         }
 
@@ -34,16 +34,28 @@
             padding-top: 30px;
         }
 
+        /* The image inside the container */
+        .image-container img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -20%);
+            max-width: 300px;
+        }
+
         /* Media query for screens smaller than 600px */
         @media (max-width: 600px) {
             .search-bar {
-                width: 90%; /* Adjust the width for smaller screens */
+                width: 100%; /* Adjust the width for smaller screens */
             }
         }
     </style>
 </head>
 <body style="background-color: rgb(53, 54, 58)">
     <form class="search-form" action="https://www.google.com/search">
+        <div class="image-container">
+            <img src="images/logo.png">
+        </div>
         <div class="search-bar">
             <input type="text" name="q" class="form-control rounded-pill" id="formSearchInput" placeholder="Search Google or type a URL">
         </div>
