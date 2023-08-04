@@ -9,7 +9,21 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+        }
+
+        a {
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .link-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
         }
 
         .search-form {
@@ -17,20 +31,16 @@
             width: 80%;
         }
 
-        .search-bar {
-            display: flex;
-            align-items: center;
-        }
-
-        .search-bar input[type="text"] {
-            flex: 1;
-            padding: 4px;
+        /* Media query for screens smaller than 600px */
+        @media (max-width: 600px) {
+            .search-bar {
+                width: 100%; /* Adjust the width for smaller screens */
+            }
         }
 
         .button-container {
             display: flex;
             justify-content: center;
-            align-items: center;
             padding-top: 30px;
         }
 
@@ -46,17 +56,15 @@
             transform: translate(-50%, -120%);
             max-width: 300px;
         }
-
-        /* Media query for screens smaller than 600px */
-        @media (max-width: 600px) {
-            .search-bar {
-                width: 100%; /* Adjust the width for smaller screens */
-            }
-        }
     </style>
 </head>
 <body style="background-color: rgb(53, 54, 58)">
+    </form>
     <form class="search-form" action="https://www.google.com/search">
+        <div class="link-container">
+            <a href="image.html" style="padding-right: 10px;">Image Search</a>
+            <a href="advanced.html">Advanced Search</a>
+        </div>
         <div class="image-container">
             <img src="images/logo.png">
         </div>
