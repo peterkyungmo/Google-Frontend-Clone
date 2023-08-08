@@ -3,6 +3,60 @@
     <head>
         <title>Search</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            a {
+            color: white;
+            }
+
+            a:hover {
+                color: white;
+            }
+
+            .link-container {
+                position: fixed;
+                top: 0;
+                right: 0;
+                padding: 20px;
+            }
+
+            .search-form {
+                max-width: 500px;
+                width: 80%;
+            }
+
+            /* Media query for screens smaller than 600px */
+            @media (max-width: 600px) {
+                .search-bar {
+                    width: 100%; /* Adjust the width for smaller screens */
+                }
+            }
+
+            .button-container {
+                display: flex;
+                justify-content: center;
+                padding-top: 30px;
+            }
+
+            .image-container {
+                position: relative;
+            }
+
+            /* The image inside the container */
+            .image-container img {
+                position: absolute;
+                top: 505%;
+                left: 50%;
+                transform: translate(-50%, -120%);
+                max-width: 300px;
+            }
+        </style>
     </head>
     <body style="background-color: rgb(53, 54, 58)">
         <form class="search-form" action="https://www.google.com/search">
@@ -10,7 +64,7 @@
                 <a href="index.html">Search</a>
             </div>
             <div class="image-container">
-
+                <img src="images/logo.png">
             </div>
             <div class="search-bar">
                 <input type="text" name="q" class="form-control rounded-pill" id="formSearchInput" placeholder="Search Google for Images">
